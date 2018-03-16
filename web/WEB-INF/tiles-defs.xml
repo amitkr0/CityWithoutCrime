@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+    
+    <definition name="main" path="/Layout.jsp">
+        <put name="header" value="/Header.jsp" />
+        <put name="topmenu" value="/TopMenu.jsp"/>
+        <put name="menu"   value="/MainMenu.jsp" />
+        <put name="footer" value="/Footer.jsp" />
+        <put name="body"   value="/Body.jsp" />
+    </definition>
+    
+    
+    <definition name="contus" extends="main">
+        <put name="body"  value="/ContactUs.jsp" />
+    </definition>
+    
+    <definition name="gal" extends="main">
+        <put name="body"  value="/Gallery.jsp" />
+    </definition>
+    
+    <definition name="stationhome" extends="main">
+        <put name="body"   value="/StationBody.jsp" />
+        <put name="menu"   value="/StationMenu.jsp" />
+    </definition>
+    <definition name="crim_rec" extends="main">
+        <put name="body"   value="/CriminalRecord.jsp" />
+        <put name="menu"   value="/StationMenu.jsp" />
+    </definition>
+    <definition name="nocrimrec" extends="main">
+        <put name="body"   value="/NoCriminalRecord.jsp" />
+        <put name="menu"   value="/StationMenu.jsp" />
+    </definition>
+    
+    <definition name="addnews" extends="main">
+        <put name="body"   value="/AddNews.jsp" />
+        <put name="menu"   value="/StationMenu.jsp" />
+    </definition>
+    <definition name="newsaddfail" extends="main">
+        <put name="body"   value="/NewsAddFail.jsp" />
+        <put name="menu"   value="/StationMenu.jsp" />
+    </definition>
+    
+    <definition name="newsadd" extends="main">
+        <put name="body"  value="/NewsAdded.jsp" />
+        <put name="menu"  value="/StationMenu.jsp" />
+    </definition>
+    
+    <definition name="update_prof" extends="main">
+        <put name="body"   value="/UpdateProfile.jsp" />
+        <put name="menu"   value="/StationMenu.jsp" />
+    </definition>
+    <definition name="slogout" extends="main">
+        <put name="body"   value="/StationLogoutSuccess.jsp" />
+        <put name="menu"   value="/MainMenu.jsp" />
+        <put name="footer" value="/Footer.jsp" />
+    </definition>
+    <definition name="compfil" extends="main">
+        <put name="body"  value="/ComplaintFiled.jsp" />
+    </definition>
+    <definition name="filecomp" extends="main">
+        <put name="body"  value="/FileComplaint.jsp" />
+    </definition>
+    <definition name="chcompst" extends="main">
+        <put name="body"  value="/CheckComplaintStatus.jsp" />
+    </definition>
+    <definition name="statusch" extends="main">
+        <put name="body"  value="/StatusChecked.jsp" />
+    </definition>
+    <definition name="stdet" extends="main">
+        <put name="body"  value="/StationDetails.jsp" />
+    </definition>
+    <definition name="slogin" extends="main">
+        <put name="menu"  value="/MainMenu.jsp" />
+        <put name="body"  value="/StationLoginBody.jsp" />
+    </definition>
+    <definition name="slogpass" extends="main">
+        <put name="body"  value="/StationBody.jsp" />
+        <put name="menu"  value="/StationMenu.jsp" />
+    </definition>
+    <definition name="slogfail" extends="main">
+        <put name="body"  value="/StationLoginFail.jsp" />
+        <put name="menu"  value="/MainMenu.jsp" />
+    </definition>
+    
+    <definition name="upstpass" extends="main">
+        <put name="body"  value="/UpdateStationPass.jsp" />
+        <put name="menu"  value="/StationMenu.jsp" />
+    </definition>
+    <definition name="upstfail" extends="main">
+        <put name="body"  value="/UpdateStationFail.jsp" />
+        <put name="menu"  value="/StationMenu.jsp" />
+    </definition>
+    
+    <definition name="comupsuc" extends="main">
+        <put name="body"  value="/ComplaintUpdateSuccess.jsp" />
+        <put name="menu"  value="/StationMenu.jsp" />
+    </definition>
+    <definition name="comupfail" extends="main">
+        <put name="body"  value="/ComplaintUpdateFail.jsp" />
+        <put name="menu"  value="/StationMenu.jsp" />
+    </definition>
+    
+    
+    
+    <definition name="mainadmin" extends="main">
+        <put name="body"  value="/Login.jsp" />
+    </definition>
+    
+    <definition name="mainadminlog" extends="main">
+        <put name="body"  value="/HomeAdmin.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="addpass" extends="main">
+        <put name="body"   value="/AddCriminalSuccess.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="addfail" extends="main">
+        <put name="body"   value="/AddCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="addfailunique" extends="main">
+        <put name="body"   value="/AddCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    
+    <definition name="checkcrimpass" extends="main">
+        <put name="body"   value="/DeleteCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="checkcrimfail" extends="main">
+        <put name="body"   value="/CheckCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="checkcomppass" extends="main">
+        <put name="body"   value="/DeleteComplaint.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="checkcompfail" extends="main">
+        <put name="body"   value="/CheckComplaint.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="checkeditcrimpass" extends="main">
+        <put name="body"   value="/EditCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="checkeditcrimfail" extends="main">
+        <put name="body"   value="/CheckCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="checkpolpass" extends="main">
+        <put name="body"   value="/DeleteStation.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="checkpolfail" extends="main">
+        <put name="body"   value="/CheckStation.jsp" /> 
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    
+    <definition name="comprecstat" extends="main">
+            <put name="body"   value="/ComplaintRecStatus.jsp" />
+            <put name="menu"  value="/AdminMenu.jsp" />
+            <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="comprecfail" extends="main">
+            <put name="body"   value="/ComplaintReceived.jsp" />
+            <put name="menu"  value="/AdminMenu.jsp" />
+            <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="delcomp" extends="main">
+        <put name="body"   value="/DeleteComplaintSuccess.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="delcrim" extends="main">
+        <put name="body"   value="/DeleteCriminalSuccess.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="delstat" extends="main">
+        <put name="body"   value="/DeleteStationSuccess.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="delstatfail" extends="main">
+        <put name="body"   value="/CheckStation.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    
+    <definition name="editcrimpass" extends="main">
+        <put name="body"   value="/EditCriminalSuccess.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="editcrimfail" extends="main">
+        <put name="body"   value="/CheckEditCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    
+    <definition name="regpolpass" extends="main">
+        <put name="body"   value="/RegisterStationSuccess.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="regpolfail" extends="main">
+        <put name="body"   value="/RegisterStation.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    
+    
+    
+    
+    
+    
+    <definition name="main1" extends="main">
+        <put name="body"   value="/ComplaintReceived.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="main10" extends="main">
+        <put name="body"   value="/CriminalRecords.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="main11" extends="main">
+        <put name="body"   value="/StationRecords.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="main3" extends="main">
+        <put name="body"   value="/AddCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="main4" extends="main">
+        <put name="body"   value="/CheckEditCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="main5" extends="main">
+        <put name="body"   value="/CheckCriminal.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="main6" extends="main">
+        <put name="body"   value="/CheckComplaint.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="main7" extends="main">
+        <put name="body"   value="/Logout.jsp" />
+    </definition>
+    
+    <definition name="main8" extends="main">
+        <put name="body"   value="/RegisterStation.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+     <definition name="main2" extends="main">
+        <put name="body"   value="/HomeAdmin.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    <definition name="main9" extends="main">
+        <put name="body"   value="/CheckStation.jsp" />
+        <put name="menu"  value="/AdminMenu.jsp" />
+        <put name="topmenu"   value="/TopMenuHide.jsp" />
+    </definition>
+    
+    
+    
+    
+    <!-- sample tiles definitions
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+
+    <definition name="${YOUR_DEFINITION_HERE}">
+    </definition>
+
+</tiles-definitions>

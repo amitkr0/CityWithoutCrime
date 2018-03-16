@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="RegisterStationBean" type="rcpl.RegisterStationBean"/>
+        <form-bean name="EditCriminalBean" type="rcpl.EditCriminalBean"/>
+        <form-bean name="EditCriminalAction" type="rcpl.EditCriminalAction"/>
+        <form-bean name="DeleteStationBean" type="rcpl.DeleteStationBean"/>
+        <form-bean name="DeleteCriminalBean" type="rcpl.DeleteCriminalBean"/>
+        <form-bean name="DeleteComplaintBean" type="rcpl.DeleteComplaintBean"/>
+        <form-bean name="ComplaintReceivedBean" type="rcpl.ComplaintReceivedBean"/>
+        <form-bean name="CheckStationBean" type="rcpl.CheckStationBean"/>
+        <form-bean name="CheckEditCriminalBean" type="rcpl.CheckEditCriminalBean"/>
+        <form-bean name="CheckComplaintBean" type="rcpl.CheckComplaintBean"/>
+        <form-bean name="CheckCriminalBean" type="rcpl.CheckCriminalBean"/>
+        <form-bean name="CheckCriminalAction" type="rcpl.CheckCriminalAction"/>
+        <form-bean name="AddCriminalBean" type="rcpl.AddCriminalBean"/>
+        <form-bean name="LoginBean" type="rcpl.LoginBean"/>
+        <form-bean name="ComplaintUpdateBean" type="rcpl.ComplaintUpdateBean"/>
+        <form-bean name="UpdateStationBean" type="rcpl.UpdateStationBean"/>
+        <form-bean name="CriminalRecordFilterBean" type="rcpl.CriminalRecordFilterBean"/>
+        <form-bean name="CriminalRecordFilter" type="rcpl.CriminalRecordFilter"/>
+        <form-bean name="StationLoginBean" type="rcpl.StationLoginBean"/>
+        <form-bean name="CheckComplaintStatusBean" type="rcpl.CheckComplaintStatusBean"/>
+        <form-bean name="FileComplaintBean" type="rcpl.FileComplaintBean"/>
+        <form-bean name="NewsActionBean" type="rcpl.NewsActionBean"/>
+    
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        
+        <action input="/AddNews.jsp" name="NewsActionBean" path="/addnews" scope="session" type="rcpl.NewsStrutsAction">
+        <forward name="success" path="newsadd"/>
+        <forward name="fail" path="newsaddfail"/>
+        </action>
+        <action input="/FileComplaint.jsp" name="FileComplaintBean" path="/fca" scope="session" type="rcpl.FileComplaintAction">
+            <forward name="pass" path="compfil"/>
+            <forward name="fail" path="filecomp"/>
+        </action>
+        <action input="/CheckComplaintStatus.jsp" name="CheckComplaintStatusBean" path="/ccsa" scope="session" type="rcpl.CheckComplaintStatusAction">
+            <forward name="found" path="statusch"/>
+            <forward name="notfound" path="chcompst"/>
+        </action>
+        <action input="/CriminalRecord.jsp" name="CriminalRecordFilterBean" path="/searcrim" scope="session" type="rcpl.CriminalRecordFilterAction">
+            <forward name="pass" path="crim_rec"/>
+            <forward name="fail" path="nocrimrec"/>
+        </action>
+        
+        <action input="/StationLoginBody.jsp" name="StationLoginBean" path="/stentr" scope="session" type="rcpl.StationLoginAction">
+            <forward name="pass" path="slogpass"/>
+            <forward name="fail" path="slogfail"/>
+        </action>
+        <action input="/UpdateProfile.jsp" name="UpdateStationBean" path="/updatestation" scope="session" type="rcpl.UpdateStationAction">
+            <forward name="pass" path="upstpass"/>
+            <forward name="fail" path="upstfail"/>
+        </action>
+        <action input="/StationBody.jsp" name="ComplaintUpdateBean" path="/cmplntup" scope="session" type="rcpl.ComplaintUpdateAction">
+            <forward name="pass" path="comupsuc"/>
+            <forward name="fail" path="comupfail"/>
+        </action>
+        <action input="/Login.jsp" name="LoginBean" path="/logadmin" scope="session" type="rcpl.LoginAction">
+            <forward name="pass"  path="mainadminlog"/>
+            <forward name="fail"  path="mainadmin"/>
+        </action>
+        <action input="/AddCriminal.jsp" name="AddCriminalBean" path="/add" scope="session" type="rcpl.AddCriminalAction">
+            <forward name="pass"  path="addpass"/>
+            <forward name="fail"  path="addfail"/>
+            <forward name="uniquefail"  path="addfailunique"/>
+        </action>
+        
+        <action input="/CheckCriminal.jsp" name="CheckCriminalBean" path="/checkcriminal" scope="session" type="rcpl.CheckCriminalAction">
+            <forward name="pass" path="checkcrimpass"/>
+            <forward name="fail" path="checkcrimfail"/>
+        </action>
+        
+        <action input="/CheckComplaint.jsp" name="CheckComplaintBean" path="/checkcomplaint" scope="session" type="rcpl.CheckComplaintAction">
+            <forward name="pass" path="checkcomppass"/>
+            <forward name="fail" path="checkcompfail"/>
+        </action>
+        <action input="/CheckEditCriminal.jsp" name="CheckEditCriminalBean" path="/checkeditcrim" scope="session" type="rcpl.CheckEditCriminalAction">
+            <forward name="pass" path="checkeditcrimpass"/>
+            <forward name="fail" path="checkeditcrimfail"/>
+        </action>
+        
+        <action input="/CheckStation.jsp" name="CheckStationBean" path="/checkpol" scope="session" type="rcpl.CheckStationAction">
+            <forward name="pass" path="checkpolpass"/>
+            <forward name="fail" path="checkpolfail"/>
+        </action>
+        
+        <action input="/ComplaintReceived.jsp" name="ComplaintReceivedBean" path="/comprec" scope="session" type="rcpl.ComplaintReceivedAction">
+            <forward name="pass" path="comprecstat"/>
+            <forward name="fail" path="comprecfail"/>
+        </action>
+        
+        <action input="/DeleteComplaint.jsp" name="DeleteComplaintBean" path="/delcomp" scope="session" type="rcpl.DeleteComplaintAction">
+            <forward name="pass" path="delcomp"/>
+        </action>
+        
+        <action input="/DeleteCriminal.jsp" name="DeleteCriminalBean" path="/deletecriminal" scope="session" type="rcpl.DeleteCriminalAction">
+            <forward name="pass" path="delcrim"/>
+        </action>
+        
+        <action input="/DeleteStation.jsp" name="DeleteStationBean" path="/delstation" scope="session" type="rcpl.DeleteStationAction">
+            <forward name="pass" path="delstat"/>
+            <forward name="fail" path="delstatfail"/>
+        </action>
+        
+        <action input="/EditCriminal.jsp" name="EditCriminalBean" path="/editcrim" scope="session" type="rcpl.EditCriminalAction">
+            <forward name="pass" path="editcrimpass"/>
+            <forward name="fail" path="editcrimfail"/>
+        </action>
+        
+        <action input="/RegisterStation.jsp" name="RegisterStationBean" path="/regpol" scope="session" type="rcpl.RegisterStationAction">
+            <forward name="pass" path="regpolpass"/>
+            <forward name="fail" path="regpolfail"/>
+            <forward name="excep" path="regpolfail2"/>
+        </action>
+        
+        
+        
+        
+        <action path="/log1" forward="stationhome"/>
+        <action path="/log2" forward="crim_rec"/>
+        <action path="/log3" forward="addnews"/>
+        <action path="/log4" forward="update_prof"/>
+        <action path="/log5" forward="slogout"/>
+        
+        <action path="/fc" forward="filecomp"/>
+        <action path="/h" forward="main"/>
+        <action path="/ccs" forward="chcompst"/>
+        <action path="/sd" forward="stdet"/>
+        <action path="/cu" forward="contus"/>
+        <action path="/g" forward="gal"/>
+        <action path="/slg" forward="slogin"/>
+        
+        <action path="/maindelcrim" forward="main5"/>
+        <action path="/maindelstat" forward="main9"/>
+        <action path="/maindelcomp" forward="main6"/>
+        <action path="/cdelstat" forward="main9"/>
+        <action path="/creg" forward="main8"/>
+        <action path="/cdelcomp" forward="main6"/>
+        <action path="/cdelcrim" forward="main5"/>
+        <action path="/cedit" forward="main4"/>
+        <action path="/cadd" forward="main3"/>
+        
+        
+        
+        
+        <action path="/adlog" forward="mainadmin"/>
+        
+        
+        <action path="/cr" forward="main1"/>
+        <action path="/ac" forward="main3"/>
+        <action path="/ec" forward="main4"/>
+        <action path="/dc" forward="main5"/>
+        <action path="/dco" forward="main6"/>
+        <action path="/lo" forward="main7"/>
+        <action path="/rnp" forward="main8"/>
+        <action path="/dp" forward="main9"/>
+        <action path="/dbdt" forward="main2"/>
+        <action path="/crimr" forward="main10"/>
+        <action path="/polr" forward="main11"/>
+        
+        
+        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+          
+     </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>
