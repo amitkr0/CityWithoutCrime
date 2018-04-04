@@ -20,7 +20,7 @@
         <%if(session.getAttribute("admin")!=null)
         {
             %>
-        Successfully added!<br><br>
+        Successfully added!!<br><br>
         <%out.println("<em>Criminal added with id :</em>"+request.getAttribute("id"));%><br><br>
             <h:link action="/cadd">Click here</h:link> to add another record.
             <%}
