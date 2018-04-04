@@ -20,7 +20,7 @@
     <body>
     <center> 
         <div class="foot">
-            Site designed by: Nilaya Rakesh, Shreya Shambhawi and Amit Kumar.<br>
+            Site designed by: Amit Kumar, Shreya Shambhawi and Nilaya Rakesh.<br>
             J2EE Summer Training Program, HPES centre, Patna-800001.
         </div>
     </center>
